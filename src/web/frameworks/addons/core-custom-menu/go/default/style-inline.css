@@ -1,0 +1,36 @@
+.nav-menu {
+    font-family: <f-menu>;
+}
+.nav-menu > li {
+    box-shadow: 0px 0px 0px <1> inset;
+}
+.nav-menu li:hover, 
+.nav-menu li.current_page_item,
+.nav-menu li.current_page_parent {
+    box-shadow: 0px -3px 0px <1> inset;
+}
+.nav-menu > li:before {
+    border: 3px solid <1>;
+}
+.nav-menu a, 
+.nav-menu a:visited {
+    color: <4>;
+}
+.nav-menu li:hover > a, 
+.nav-menu li.current_page_item > a,
+.nav-menu li.current_page_parent > a,
+.nav-menu li.current_page_ancestor > a{
+    color: <1>;
+}
+.nav-menu ul > li.page_item_has_children:before {
+    border-left: 6px solid <1>;
+}
+
+/*
+# Responsive menu toggler
+*/
+.menu-toggle,
+.menu-toggle:before, 
+.menu-toggle:after {
+    background: <1>;
+}

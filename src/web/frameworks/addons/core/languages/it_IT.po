@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Mark Jivko\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it_IT\n"
+
+msgid "Install Required Plugins"
+msgstr "Installa i Plugins richiesti"
+
+msgid "Install Plugins"
+msgstr "Installa plugin"
+
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr "Installazione plugin: %s"
+
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+msgid "Something went wrong with the plugin API."
+msgstr "Qualcosa è andato storto con l'API plugin."
+
+#. translators: 1: plugin name(s).
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Questo tema richiede il seguente plugin: %1$s."
+msgstr[1] "Questo tema richiede i seguenti plugin: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Questo tema raccomanda il seguente plugin: %1$s."
+msgstr[1] "Questo tema raccomanda i seguenti plugin: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Il seguente plugin deve essere aggiornato per garantire la massima compatibilità con questo tema: %1$s."
+msgstr[1] "I seguenti plugin devono essere aggiornati per garantire la massima compatibilità con questo tema: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "C'è un aggiornamento disponibile per: %1$s."
+msgstr[1] "Sono disponibili degli aggiornamenti per i seguenti plugin: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Il seguente plugin richiesto è al momento inattivo: %1$s."
+msgstr[1] "I seguenti plugin richiesti sono al momento inattivi: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Il seguente plugin raccomandato è al momento inattivo: %1$s."
+msgstr[1] "I seguenti plugin raccomandati sono al momento inattivi: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Inizio installazione plugin"
+msgstr[1] "Inizio installazione plugin"
+
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Iniziare l'aggiornamento del plugin"
+msgstr[1] "Iniziare l'aggiornamento dei plugin"
+
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Inizio attivazione plugin"
+msgstr[1] "Inizio attivazione plugin"
+
+msgid "Return to Required Plugins Installer"
+msgstr "Ritorna all' Installer del plugin richiesto"
+
+msgid "Return to the Dashboard"
+msgstr "Ritorna alla Bacheca"
+
+msgid "Plugin activated successfully."
+msgstr "Plugin installato corretamente"
+
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Non verrà eseguita alcuna azione. Il plugin %1$s è già attivo. "
+
+#. translators: 1: plugin name.
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Il plugin non è stato attivato. Per questo tema è necessaria una versione più recente di %s. Aggiornare il plugin. "
+
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Tutti i plugin installati e attivati ​​con successo. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "Elimina questo avviso"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+msgid "Please contact the administrator of this site for help."
+msgstr "Contattare l'amministratore del sito per chiedere aiuto. "
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Questo plugin deve essere aggiornato per essere compatibile con il tema. "
+
+msgid "Update Required"
+msgstr "È richiesto l'aggiornamento "
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Il pacchetto remoto del plugin non contiene una cartella con lo slug desiderato e non è possibile rinominare. "
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Contatta il fornitore del plugin per chiedergli di preparare il plugin secondo le linee guida di WordPress. "
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Il pacchetto remoto del plugin comprende più file ma questi file on sono raggruppati in una cartella. "
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "e"
+
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+msgid "Required"
+msgstr "﻿Obbligatorio"
+
+msgid "Recommended"
+msgstr "Raccomandato"
+
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+msgid "External Source"
+msgstr "Fonte esterna "
+
+msgid "Pre-Packaged"
+msgstr "Pre-Packaged"
+
+msgid "Not Installed"
+msgstr "Non installato"
+
+msgid "Installed But Not Activated"
+msgstr "Installato ma non attivato"
+
+msgid "Active"
+msgstr "Attiva"
+
+msgid "Required Update not Available"
+msgstr "L'aggiornamento richiesto non è disponibile"
+
+msgid "Requires Update"
+msgstr "Aggiornamento richiesto"
+
+msgid "Update recommended"
+msgstr "Aggiornamento consigliato"
+
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All"
+msgid_plural "All"
+msgstr[0] "Tutto"
+msgstr[1] "Tutti"
+
+#. translators: 1: number of plugins.
+msgid "To Install"
+msgid_plural "To Install"
+msgstr[0] "Installare il"
+msgstr[1] "Installare i"
+
+#. translators: 1: number of plugins.
+msgid "Update Available"
+msgid_plural "Update Available"
+msgstr[0] "Aggiornamento disponibile"
+msgstr[1] "Aggiornamenti disponibili"
+
+#. translators: 1: number of plugins.
+msgid "To Activate"
+msgid_plural "To Activate"
+msgstr[0] "Attivare il"
+msgstr[1] "Attivare i"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "sconosciuto"
+
+msgid "Installed version:"
+msgstr "Versione installata:"
+
+msgid "Minimum required version:"
+msgstr "Versione minima richiesta:"
+
+msgid "Available version:"
+msgstr "Versione disponibile:"
+
+msgid "No plugins to install, update or activate."
+msgstr "Nessun plugin da installare,   aggiornare o attivare."
+
+msgid "Plugin"
+msgstr "Plugin (estensione)"
+
+msgid "Source"
+msgstr "Sorgente"
+
+msgid "Type"
+msgstr "Typo"
+
+msgid "Version"
+msgstr "Versione"
+
+msgid "Status"
+msgstr "Stato"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr "Installa %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr "Aggiorna %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr "Attiva %2$s"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "Messaggio di aggiornamento dall'autore del plugin:"
+
+msgid "Install"
+msgstr "Installa"
+
+msgid "Update"
+msgstr "Aggiornare"
+
+msgid "Activate"
+msgstr "Attivare"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Nessun plugin è stato selezionato per l'installazione. L'azione non è  stata eseguita"
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Nessun plugin è stato selezionato per l'aggiornamento. L'azione non è  stata eseguita"
+
+msgid "No plugins are available to be installed at this time."
+msgstr "Nessun plugin è  disponibile per l'installazione. "
+
+msgid "No plugins are available to be updated at this time."
+msgstr "Nessun plugin è al momento disponibile per  l'aggiornamento. "
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Nessun plugin è stato selezionato per l'attivazione. L'azione non è  stata eseguita. "
+
+msgid "No plugins are available to be activated at this time."
+msgstr "Nessun plugin è disponibile per l'attivazione. "
+
+msgid "Plugin activation failed."
+msgstr "Attivazione plugin fallita"
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Aggiornamento plugin %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: %2$s."
+msgstr "Errore durante l'installazione %1$s: %2$s."
+
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr "L'installazione di %1$s fallita"
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Il processo di installazione e l'attivazione sta iniziando. Questo processo può richiedere tempo su alcuni host, quindi per favore sii paziente."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installato e attivato con successo"
+
+msgid "Show Details"
+msgstr "Mostra dettagli"
+
+msgid "Hide Details"
+msgstr "Nascondi dettagli"
+
+msgid "All installations and activations have been completed."
+msgstr "Tutte le installazioni e le attivazioni sono state completate."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installo e attivo plugin %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Il processo di installazione si avvia. Questo processo può richiedere tempo su alcuni host, quindi per favore sii paziente."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr "%1$s installato con successo"
+
+msgid "All installations have been completed."
+msgstr "Tutte le installazioni sono state completate."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installazione Plugin %1$s (%2$d/%3$d)"
+

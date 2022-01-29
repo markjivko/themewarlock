@@ -1,0 +1,13 @@
+.st-vc-swipe-blocks .swipe > div > .preview.no-feature {
+    box-shadow: 0px 0px 0px 2px inset <1>;
+}
+.st-vc-swipe-blocks .swipe > div > .preview > .cover {
+    background: <1>;
+}
+.st-vc-swipe-blocks .swipe-navigation > .left:hover, .st-vc-swipe-blocks .swipe-navigation > .right:hover {
+    color: <1>;
+    border-color: <1>;
+}
+.st-vc-swipe-blocks h1 span {
+    font-family: <f-h2.200.normal>;
+}

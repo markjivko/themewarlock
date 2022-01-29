@@ -1,0 +1,19 @@
+<?php
+    /*@var $currentUser Model_User*/
+    $currentUser = $this->getPlaceholder(View_Admin::PH_CURRENT_USER);
+?><div class="form-container">
+    <form class="form-signin form-error" method="post" action="">
+        <div class="header"><div class="logo"></div></div>
+        <h2 class="form-signin-heading"><?php echo $this->getPlaceholder(WebView::PH_TITLE);?></h2>
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+            <?php if ($currentUser instanceof Model_User && $currentUser->role == Session::ROLE_ADMIN):?>
+                <b><?php echo $this->getPlaceholder(View_Error::PH_EXC)->getMessage();?></b> exception thrown in <b><?php echo basename($this->getPlaceholder(View_Error::PH_EXC)->getFile());?>, line <?php echo $this->getPlaceholder(View_Error::PH_EXC)->getLine();?></b> whilst calling <b><?php echo get_class($this->getPlaceholder(View_Error::PH_CONTROLLER));?>::<?php echo $this->getPlaceholder(View_Error::PH_METHOD);?>()</b>
+            <?php else:?>
+                <b><?php echo $this->getPlaceholder(View_Error::PH_EXC)->getMessage();?></b>
+            <?php endif;?>
+        </div>
+        <a href="/" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-home"></span> Return home</a>
+    </form>
+</div>

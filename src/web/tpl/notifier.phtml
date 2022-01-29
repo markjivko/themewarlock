@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <style>
+            @font-face {
+                font-family: "proxima_nova";
+                src: url("https://www.dropbox.com/static/fonts/proximanova/proxima-nova-regular.otf") format("opentype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            a {
+                color: #007ee6;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body style="padding: 0; width: 100% !important; -webkit-text-size-adjust: 100%; margin: 0; -ms-text-size-adjust: 100%;" marginheight="0" marginwidth="0">
+        <center>
+            <table cellpadding="8" cellspacing="0" style="width: <?php echo (is_string($eventDetails) ? 940 : 540); ?>px; padding: 0; width: 100% !important; background: #ffffff; margin: 0; background-color: #ffffff;" border="0">
+                <tr>
+                    <td valign="top">
+                        <table cellpadding="0" cellspacing="0" style="width: <?php echo (is_string($eventDetails) ? 940 : 540); ?>px; border-radius: 4px; -webkit-border-radius: 4px; border: 1px #dceaf5 solid; -moz-border-radius: 4px;" border="0" align="center">
+                            <tr>
+                                <td colspan="3" height="30"></td>
+                            </tr>
+                            <tr style="line-height: 0px;">
+                                <td width="100%" style="font-size: 0px;" align="center" height="1">
+                                    <img width="256px" style="max-height: 256px; width: 256px; *width: 256px; *height: 128px;" alt="" src="http://<?php echo Config::get(true)->myDomain;?>/img/logo.png">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" style="<?php echo (is_string($eventDetails) ? 'width: 100%;' : '');?> line-height: 25px;" border="0" align="center">
+                                        <tr>
+                                            <td colspan="3" height="30"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="36"></td>
+                                            <td width="<?php echo (is_string($eventDetails) ? 854 : 454); ?>" align="left" style="color: #444444; border-collapse: collapse; font-size: 11pt; font-family: proxima_nova, 'Open Sans', 'Lucida Grande', 'Segoe UI', Arial, Verdana, 'Lucida Sans Unicode', Tahoma, 'Sans Serif';" valign="top">
+                                                <b title="<?php echo ucfirst($eventType);?>" style="color: <?php echo $eventColor;?>"><?php echo $eventName;?></b> by <b><?php echo $userName;?></b>
+                                                <br><br>
+                                                <?php if (is_array($eventDetails) && count($eventDetails)):?>
+                                                    <table style="font-size: 11pt; margin-bottom: 20px;">
+                                                        <?php foreach ($eventDetails as $key => $value):?>
+                                                        <tr>
+                                                            <td><b><?php echo $key;?></b></td>
+                                                            <td><?php echo $value;?></td>
+                                                        </tr>
+                                                        <?php endforeach;?>
+                                                    </table>
+                                                <?php elseif(is_string($eventDetails)): ?>
+                                                    <?php echo $eventDetails;?>
+                                                <?php endif;?>
+                                                <br><br>
+                                                <center><a style="border-radius: 3px; font-size: 15px; color: white; border: 1px #1373b5 solid; box-shadow: inset 0 1px 0 #6db3e6, inset 1px 0 0 #48a1e2; text-decoration: none; padding: 14px 7px 14px 7px; width: 210px; max-width: 210px; font-family: proxima_nova, 'Open Sans', 'lucida grande', 'Segoe UI', arial, verdana, 'lucida sans unicode', tahoma, sans-serif; margin: 6px auto; display: block; background-color: #007ee6; text-align: center;" href="http://<?php echo Config::get(true)->myDomain;?>">Visit Theme Warlock</a></center>
+                                            </td>
+                                            <td width="36"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="22"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" align="center" border="0">
+                            <tr>
+                                <td height="10"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0; border-collapse: collapse;">
+                                    <table cellpadding="0" cellspacing="0" align="center" border="0">
+                                        <tr style="color: #a8b9c6; font-size: 11px; font-family: proxima_nova, 'Open Sans', 'Lucida Grande', 'Segoe UI', Arial, Verdana, 'Lucida Sans Unicode', Tahoma, 'Sans Serif'; -webkit-text-size-adjust: none;">
+                                            <td width="<?php echo (is_string($eventDetails) ? 600 : 400); ?>" align="left"></td>
+                                            <td width="<?php echo (is_string($eventDetails) ? 328 : 128); ?>" align="right">&#169; <?php echo date('Y');?> Mark Jivko</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

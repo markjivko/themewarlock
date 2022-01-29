@@ -1,0 +1,6 @@
+# Nginx Commands
+Cmnd_Alias NGINX_RESTART = /usr/sbin/service nginx restart
+Cmnd_Alias NGINX_RELOAD  = /usr/sbin/service nginx reload
+
+# No-Password Commands
+stephino ALL=NOPASSWD: NGINX_RESTART, NGINX_RELOAD

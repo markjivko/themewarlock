@@ -1,0 +1,114 @@
+/*Tweets*/
+.{Plugin.getSlug} {
+    background-size: cover;
+    background-position: 0 0%;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.{Plugin.getSlug}:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/parallax-overlay.png") repeat scroll 0 0 transparent;
+}
+.{Plugin.getSlug} .tweets {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 30px;
+    line-height: 20px;
+    font-size: 14px;
+    z-index: 2;
+}
+.{Plugin.getSlug} .tweets h2 {
+    z-index: 2;
+    position:relative;
+    color: #ffffff;
+    text-align: center;
+}
+.{Plugin.getSlug} .tweets > .elements {
+    min-height: 100px;
+}
+.{Plugin.getSlug} .tweets > .elements > .tw {
+    display: none;
+    line-height: 20px;
+    font-size: 14px;
+    width: 100%;
+}
+.{Plugin.getSlug} .tweets > .elements > .tw a {
+    line-height: 20px;
+    font-size: 14px;
+}
+.{Plugin.getSlug} .tweets > .elements > .tw > .time {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.{Plugin.getSlug} .tweets > .navigation {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    height: 20px;
+    background: transparent;
+    margin-bottom: -10px;
+}
+.{Plugin.getSlug} .tweets > .navigation:hover {
+    opacity: 1;
+}
+.{Plugin.getSlug} .tweets > .navigation > i {
+    background: #cccccc;
+    height: 12px;
+    display: inline-block;
+    width: 12px;
+    float: left;
+    margin: 4px 3px 0;
+    text-align: left;
+    text-indent: -1000em;
+    border-radius: 50%;
+    cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+.{Plugin.getSlug} .tweets > .navigation > i.active {
+    background: #000000;
+    height: 16px;
+    width: 16px;
+    margin: 2px 1px 0;
+}
+
+.{Plugin.getSlug} .tweets > .elements > .tw, 
+.{Plugin.getSlug} .tweets > .elements > .tw a {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+.{Plugin.getSlug} .tweets > .navigation {
+    bottom: 0px;
+    left: 50%;
+    margin-bottom: -30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.{Plugin.getSlug} .tweets > .navigation {
+    left: auto;
+    right: auto;
+    text-align: center;
+    width: 100%;
+    bottom: -150px;
+}
+.{Plugin.getSlug} .tweets > .navigation > i {
+    background: #ffffff;
+    float: none;
+    vertical-align: top;
+}

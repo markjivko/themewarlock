@@ -1,0 +1,91 @@
+/*
+# Header
+*/
+.{Plugin.getSlug} h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 75px 0; 
+    padding: 0;
+}
+.{Plugin.getSlug} h1 span {
+    display: inline-block;
+    text-transform: none;
+    font-size: 0.5em;
+    clear: both;
+    width: 100%;
+    font-weight: 200;
+}
+
+/*
+# Table
+*/
+.{Plugin.getSlug} [data-role="table"] {
+    margin-bottom:75px;
+}
+.{Plugin.getSlug} .pricing-table-header {
+    color: #666666;
+    background: #dddddd;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    height: 80px;
+    line-height: 15px;
+    position: relative;
+    text-align: center;
+    vertical-align: bottom;
+    box-shadow: -1px 0 0 #ebebeb inset;
+}
+.{Plugin.getSlug} .pricing-table-header > span {
+    background: #989898;
+    border-radius: 50% 50% 50% 50%;
+    bottom: -15px;
+    color: #ffffff;
+    display: block;
+    font-weight: 400;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+.{Plugin.getSlug} .pricing-table-row, 
+.{Plugin.getSlug} .pricing-table-footer {
+    box-shadow: -1px 0 0 #cdcdcd inset;
+    padding: 10px 0;
+    text-align: center;
+    background: #eeeeee;
+}
+.{Plugin.getSlug} .pricing-table-row.first {
+    padding-top: 40px;
+}
+.{Plugin.getSlug} .pricing-table-footer .btn {
+    opacity: 0;
+}
+.{Plugin.getSlug} .col.active .pricing-table-footer .btn {
+    opacity: 1;
+}
+.{Plugin.getSlug} .col.active .pricing-table-header {
+    background-color: #888888;
+    box-shadow: 0px -10px 0px #888888;
+    color: #ffffff;
+}
+.{Plugin.getSlug} .col.active .pricing-table-header > span {
+    background-color: #000000;
+}
+.{Plugin.getSlug} .col.active .pricing-table-row, 
+.{Plugin.getSlug} .col.active .pricing-table-footer {
+    background: #ffffff;
+}
+.{Plugin.getSlug} .col:last-child .pricing-table-row, 
+.{Plugin.getSlug} .col:last-child .pricing-table-footer {
+    box-shadow: none;
+}
+
+/*
+# Widget areas
+*/
+aside .{Plugin.getSlug} h1 {
+    margin-top: 0px;
+}

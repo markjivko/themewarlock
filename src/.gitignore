@@ -1,0 +1,6 @@
+/web/config/config.ini
+/web/log/
+/web/temp/
+/nbproject
+/html
+Thumbs.db

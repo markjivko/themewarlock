@@ -1,0 +1,177 @@
+<?php 
+    /*@var $pagination Pagination*/
+    $pagination = $this->getPlaceholder(View_Admin::PH_PAGINATION);
+
+    /*@var $projectsList Model_Project[]*/
+    $projectsList = $pagination->getPageData();
+
+    /*@var $currentUser Model_User*/
+    $currentUser = $this->getPlaceholder(View_Admin::PH_CURRENT_USER);
+    
+    /*@var $queryUser Model_User*/
+    $queryUser = $this->getPlaceholder(View_Admin::PH_QUERY_USER);
+    
+    /*@var $listUserModels Model_User[]*/
+    $listUserModels = array();
+?><div class="row">
+    <h2>
+        <?php if ($currentUser->role == Session::ROLE_ADMIN && null !== $queryUser): ?>
+            Projects by <?php echo $queryUser->name;?>
+        <?php else:?>
+            Projects Manager
+        <?php endif?>
+        <button class="btn btn-default" data-role="add" title="Create a new WordPress theme" data-placement="right" ><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+    </h2>
+    <?php if (null !== $error = $this->getPlaceholder(View_Admin::PH_ERROR)):?>
+        <div class="row">
+            <div class="alert alert-danger alert-loading" role="alert">
+                <?php echo $error;?>
+            </div>
+        </div>
+    <?php endif;?>
+    <?php
+        // Valid list of projects
+        if (null != $projectsList && count($projectsList)):
+    ?>
+    <table class="table table-striped table-hover">
+        <thead>
+            <?php if ($currentUser->role == Session::ROLE_ADMIN && null === $queryUser):?>
+                <th style="width: 100px;">Author</th>
+            <?php endif;?>
+            <th>Project</th>
+            <th style="width: 100px; text-align: right;">Action</th>
+        </thead>
+        <tbody>
+        <?php 
+            foreach ($projectsList as /*@var $project Model_Project*/ $project): 
+            // Get the project data
+            $projectData = $project->getConfig()->getProjectData();
+
+            /*@var $projectCoreData Model_Project_Config_Item[]*/
+            $projectCoreData = isset($projectData[Model_Project_Config::CATEGORY_CORE]) ? $projectData[Model_Project_Config::CATEGORY_CORE] : array();
+
+            /*@var $projectNameItem Model_Project_Config_Item_String*/
+            $projectNameItem = current(array_filter($projectCoreData, function(/*@var $item Model_Project_Config_Item*/ $item) {
+                return Cli_Run_Integration::OPT_PROJECT_NAME === $item->getKey();
+            }));
+
+            /*@var $projectFrameworkItem Model_Project_Config_Item_String*/
+            $projectFrameworkItem = current(array_filter($projectCoreData, function(/*@var $item Model_Project_Config_Item*/ $item) {
+                return Cli_Run_Integration::OPT_PROJECT_FRAMEWORK === $item->getKey();
+            }));
+
+            /*@var $projectMarketplaceItem Model_Project_Config_Item_String*/
+            $projectMarketplaceItem = current(array_filter($projectCoreData, function(/*@var $item Model_Project_Config_Item*/ $item) {
+                return Cli_Run_Integration::OPT_PROJECT_MARKETPLACE === $item->getKey();
+            }));
+            
+            // Get the list of snapshots
+            $snapshots = WordPress_Snapshots::getInstance($project->getProjectId(), $project->getUserId())->getAll();
+            
+            // Get the project age
+            $projectAge        = $project->getMarker()->getAge();
+            $projectAgeVerbose = $project->getMarker()->getAgeVerbose();
+            $projectEditorId   = $project->getMarker()->isMarked(false);
+        ?>
+            <tr>
+                <?php 
+                    if ($currentUser->role == Session::ROLE_ADMIN && null === $queryUser):
+                        // New entry
+                        if (!isset($listUserModels[$project->getUserId()])) {
+                            $listUserModels[$project->getUserId()] = new Model_User($project->getUserId());
+                        }
+                ?>
+                    <td style="width: 100px;"><a class="btn btn-default" data-placement="top" title="Filter by user #<?php echo $project->getUserId();?>" href="/admin/index/<?php echo $project->getUserId();?>"><?php echo ($project->getUserId() == $currentUser->id) ? ('<span class="glyphicon glyphicon-star"></span> Me') : $listUserModels[$project->getUserId()]->name;?></a></td>
+                <?php endif;?>
+                <td>
+                    <a href="javascript:void(0);" data-role="edit" data-project-id="<?php echo $project->getProjectId(); ?>" data-user-id="<?php echo $project->getUserId(); ?>" <?php echo (false !== $projectEditorId && null !== $projectAge ? 'title="' . ($projectAge > 10 ? ('Marked as current ' . $projectAgeVerbose . ' ago by user #' . $projectEditorId) : ('User #' . $projectEditorId . ' is working...')) . '"' : '');?>><?php echo (false !== $projectEditorId ? '<span class="glyphicon glyphicon-' . ($projectAge > 10 ? 'chevron-right' : 'play') . '"></span> ' : '');?><?php echo is_object($projectNameItem) ? $projectNameItem->getValue() : '[Undefined title]';?></a> (<?php echo is_object($projectFrameworkItem) ? $projectFrameworkItem->getValue() : '[Undefined type]';?>)
+                </td>
+                <td style="width: 200px; text-align: right;">
+                    <div class="btn-group">
+                        <?php if (Session::ROLE_ADMIN === $currentUser->role):?>
+                            <?php 
+                                // Get the task without spawning a new one (read-only)
+                                $task = TaskManager::getInstance()->get($project->getUserId(), $project->getProjectId(), false);
+                                
+                                // Valid, successfully completed task
+                                if (null !== $task && TaskManager_Task::STATUS_DONE === $task->getStatus()):
+                            ?>
+                                <button type="button" title="Download" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cloud-download"></span></button>
+                                <ul class="dropdown-menu" role="menu" data-role="download" data-project-id="<?php echo $project->getProjectId(); ?>" data-user-id="<?php echo $project->getUserId(); ?>">
+                                    <li role="presentation" class="dropdown-header"><b>Marketplace</b></li>
+                                    <li><a href="javascript:void(0);" data-download="<?php echo Dist::DOWNLOAD_KEY_MARKETPLACE;?>"><span class="glyphicon glyphicon-compressed"></span> <?php echo $projectMarketplaceItem->getValue();?></a></li>
+                                    <li class="divider"></li>
+                                    <?php foreach ($snapshots as $snapshot):?>
+                                    <li role="presentation" class="dropdown-header"><b>Snapshot #<?php echo $snapshot->getId();?>: <?php echo (strlen($snapshot->getTitle()) ? $snapshot->getTitle() : '<i>no title</i>');?></b></li>
+                                    <li><a href="javascript:void(0);" data-download="snapshot-<?php echo $snapshot->getId();?>-preview-live"><span class="glyphicon glyphicon-picture"></span> Screenshot - Live</a></li>
+                                    <li><a href="javascript:void(0);" data-download="snapshot-<?php echo $snapshot->getId();?>-preview-demo"><span class="glyphicon glyphicon-picture"></span> Screenshot - Demo</a></li>
+                                    <li><a href="javascript:void(0);" data-download="snapshot-<?php echo $snapshot->getId();?>"><span class="glyphicon glyphicon-compressed"></span> Archive - Live</a></li>
+                                    <?php endforeach;?>
+                                    <li class="divider"></li>
+                                    <li><a href="javascript:void(0);" data-download="<?php echo Dist::DOWNLOAD_KEY_DOCS;?>"><span class="glyphicon glyphicon-picture"></span> Screenshot - Docs</a></li>
+                                    <li><a href="javascript:void(0);" data-download="<?php echo Dist::DOWNLOAD_KEY_EXPORT;?>"><span class="glyphicon glyphicon-compressed"></span> Project Export</a></li>
+                                </ul>
+                                <button type="button" title="Publish" data-placement="top" class="btn btn-default" data-role="publish" data-project-id="<?php echo $project->getProjectId(); ?>" data-user-id="<?php echo $project->getUserId(); ?>"><span class="glyphicon glyphicon-export"></span></button>
+                            <?php endif;?>
+                            <button type="button" title="Generate" data-placement="top" class="btn btn-default" data-role="generate" data-project-id="<?php echo $project->getProjectId(); ?>" data-user-id="<?php echo $project->getUserId(); ?>"><span class="glyphicon glyphicon-ok"></span><span class="progress"></span></button>
+                        <?php endif;?>
+                        <button type="button" title="Delete" data-placement="top" class="btn btn-default" data-role="delete" data-project-id="<?php echo $project->getProjectId(); ?>" data-user-id="<?php echo $project->getUserId(); ?>"><span class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                </td>
+            </tr>
+        <?php endforeach;?>
+        </tbody>
+    </table>
+    <?php echo $pagination->getPaginationHtml();?>
+    <?php else: ?>
+        <div class="row">
+            <div class="alert alert-info alert-loading" role="alert">
+                No projects created yet. Click the "+" button above to add a new one.
+            </div>
+        </div>
+    <?php endif; ?>
+</div>
+<div class="modal fade" id="modal-add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Create a new WordPress theme</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" autocomplete="off">
+                    <div class="form-group">
+                        <label for="themeName" class="col-sm-3 control-label">Theme Name</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" placeholder="WordPress theme name" id="themeName" name="themeName" required="true" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="themeFramework" class="col-sm-3 control-label" title="The framework cannot be changed later" data-placement="bottom">Theme Framework</label>
+                        <div class="col-sm-9">
+                            <select id="themeFramework" name="themeFramework" class="form-control">
+                                <?php foreach(Framework::getAll(true) as $frameworkId => $info):?>
+                                <option value="<?php echo $frameworkId;?>"><?php echo $info[Cli_Run_Integration::FRAMEWORK_TARGET];?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-role="create">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-preview">
+    <div class="modal-dialog modal-xlg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>

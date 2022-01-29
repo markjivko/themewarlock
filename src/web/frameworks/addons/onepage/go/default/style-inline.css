@@ -1,0 +1,93 @@
+/**
+Typography
+*/
+::selection {
+    background: <2.lightest.rgba.100>;
+}
+::-moz-selection {
+    background: <2.lightest.rgba.100>;
+}
+body {
+    font-family: <f-text.light.normal.bold>;
+    color: <4>;
+}
+a {
+    color: <3>;
+    font-family: <f-link>;
+}
+a:visited {
+    color: <3>;
+}
+a:hover,
+a:focus,
+a:active {
+    color: <3.complement>;
+}
+h1 a, header .site-branding > .site-title a {
+    color: <4>;
+}
+h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+    color: <4.darker.rgba.200>;
+}
+h1 {
+    font-family: <f-h1.200.normal>;
+}
+h2 {
+    font-family: <f-h2.200.normal>;
+}
+h3, h4, h5, h6 {
+    font-family: <f-h3.200.normal>;
+}
+code, pre {
+    color: <2>;
+}
+blockquote:before {
+    color: <1>;
+}
+
+/*
+# Buttons
+*/
+.btn:not(:disabled):not(.disabled), .btn:not(:disabled):not(.disabled):visited {
+    background: <1>;
+    border-color: <1.darkest>;
+    color: <1.contrastNonColor>;
+    text-shadow: 0px -1px 0px <1.darkest>;
+    font-family: <f-button.light.normal.bold>;
+}
+.btn:hover:not(:disabled):not(.disabled), .btn:active:hover:not(:disabled):not(.disabled) {
+    background: <1.darker>;
+    border-color: <1>;
+    color: <1.contrastNonColor>;
+}
+.btn:active:not(:disabled):not(.disabled), .btn:focus:not(:disabled):not(.disabled), .btn.focus:not(:disabled):not(.disabled) {
+    background: <1.darkest>;
+    border-color: <1.darkest>;
+}
+
+/*
+# Social Icons
+*/
+[class^="icon-s-"], 
+[class*=" icon-s-"], 
+[class^="icon-s-"]:visited, 
+[class*=" icon-s-"]:visited {
+    color: <1>;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 4px;
+    text-decoration: none !important;
+    outline: none;
+}
+[class^="icon-s-"]:hover, 
+[class*=" icon-s-"]:hover {
+    color: <3.complement> !important;
+}
+[class^="icon-s-"] > span, 
+[class*=" icon-s-"] > span {
+    display: none;
+}
+.post-thumbnail-holder {
+    background: <1>;
+}

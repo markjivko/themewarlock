@@ -1,0 +1,16 @@
+{if.core.useStoryline}
+/*
+# Storyline
+*/
+.st-vc-category-grid .isotope > div {
+    opacity: 0;
+  -webkit-transition: opacity 2s ease-out;
+     -moz-transition: opacity 2s ease-out;
+       -o-transition: opacity 2s ease-out;
+          transition: opacity 2s ease-out;
+}
+.st-vc-category-grid .isotope.visible > div,
+body.compose-mode .st-vc-category-grid .isotope > div {
+    opacity: 1;
+}
+{/if.core.useStoryline}

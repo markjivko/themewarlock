@@ -1,0 +1,39 @@
+<h2>Configuration Editor</h2>
+<?php foreach ($this->getPlaceholder(View_System::PH_ENTRIES) as /* @var $entry Config_Items_Descriptor_Entry */ $entry):?>
+<div class="row">
+    <div class="form-group">
+        <label title="<?php echo htmlentities($entry->getDescription());?>" class="col-sm-3 control-label" data-toggle="tooltip" data-placement="top" for="entry-<?php echo $entry->getName();?>">
+            <h4><?php echo $entry->getName();?></h4>
+        </label>
+        <div class="col-sm-9 project-item-control">
+            <?php 
+                if (null === $entry->getOptions()):
+                    $type = 'text';
+                    switch ($entry->getType()) {
+                        case Config_Items_Descriptor_Entry::TYPE_INT:
+                        case Config_Items_Descriptor_Entry::TYPE_INTEGER:
+                            $type = 'number';
+                            break;
+                    }
+                    switch ($entry->getSuffix()) {
+                        case Config_Items_Descriptor_Entry::SUFFIX_EMAIL:
+                            $type = 'email';
+                            break;
+                        
+                        case Config_Items_Descriptor_Entry::SUFFIX_URL:
+                            $type = 'url';
+                            break;
+                    }
+            ?>
+                <input type="<?php echo $type;?>" name="<?php echo $entry->getName();?>" value="<?php echo htmlentities($entry->getValue());?>" class="form-control" id="entry-<?php echo $entry->getName();?>" />
+            <?php else: ?>
+                <select name="<?php echo $entry->getName();?>" class="form-control">
+                    <?php foreach($entry->getOptions() as $optionName):?>
+                    <option value="<?php echo htmlentities($optionName);?>"<?php if($optionName == $entry->getValue()):?> selected="selected"<?php endif;?>><?php echo htmlentities($optionName);?></option>
+                    <?php endforeach;?>
+                </select>
+            <?php endif;?>
+        </div>
+    </div>
+</div>
+<?php endforeach;?>

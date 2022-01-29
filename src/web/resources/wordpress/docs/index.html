@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- 
+ * {utils.common.copyright}
+-->
+<html lang="en">
+<head>
+    <title>{project.destProjectName} Documentation v.{project.versionVerbose}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{project.destProjectName} Theme Documentation" />
+    <meta name="author" content="{config.authorName}" />    
+    <link rel="shortcut icon" type="image/png" href="src/img/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <script type="text/javascript" src="src/js/font-awesome.js" defer ></script>
+</head> 
+<body class="body-orange">
+    <div class="page-wrapper">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <i aria-hidden="true" class="icon fa fa-vial">&nbsp;</i>
+                        <a href="{utils.common.themeDocsUrl}"><span class="text-highlight">{project.destProjectName}</span><span class="text-bold">Docs</span></a>
+                    </h1>
+                </div>
+                <div class="meta"><i class="icon fa fa-code-branch"></i> Version: {project.versionVerbose} <i class="icon fa fa-copyright"></i> <a target="_blank" href="{utils.common.themeUrl}">{config.authorName}</a></div>
+            </div>
+        </header>
+        
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-basketball-ball"></i> Let's play!</h1>
+                </div>
+                
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            
+                            <section id="section-intro" class="doc-section">
+                                <h2 class="section-title">Preface</h2>
+                                <div class="section-block">
+                                    <p>We strongly believe you should be able to use our products with no documentation at all; well-coded features are self-explanatory and intuitive.</p>
+                                    <p>However, some items may remain undiscovered or misunderstood, hence the need for this document.</p>
+                                    <p>We decided to keep this document as short and as playful as possible. Enjoy!</p>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder"><i class="icon fa fa-meteor"></i></div>
+                                        <div class="content">
+                                            You will find a synopsis for each <b><a class="scrollto" href="#section-features"><i class="icon fa fa-link"></i> Feature</a></b> in a callout like this one.
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="section-about" class="doc-section">
+                                <h2 class="section-title">About {options.projectName}</h2>
+                                <div class="section-block">
+                                    <p>{options.projectDescription}</p>
+                                    <ul class="list">
+                                        <li><b>Version</b>: {project.versionVerbose}</li>
+                                        <li><b>Tags</b>: {utils.common.tagsList}</li>
+                                    </ul>
+                                    <p>A child theme is included in this package. Use it to easily and non-destructively edit {options.projectName}.</p>
+                                </div>
+                            </section>
+                            
+                            <section id="section-installation" class="doc-section">
+                                
+                                <h2 class="section-title">Installation</h2>
+                                
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Step One - Install the theme</h3>
+                                    <ol class="list">
+                                        <li>Locate the <code><i class="icon fa fa-file-archive"></i> {project.destDir}.zip</code> theme archive</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Navigate to the Admin Dashboard on your WordPress website</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Go to <code><i class="icon fa fa-cogs"></i> Appearance &gt; Themes &gt; Add New</code> and click on <span class="btn btn-blue">Upload Theme</span></li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Choose the <code><i class="icon fa fa-file-archive"></i> {project.destDir}.zip</code> archive and click on <span class="btn btn-blue">Install</span></li>
+                                        <li><i class="icon fa fa-window-maximize"></i> After the theme is installed, <span class="btn btn-blue">Activate</span> it from <code><i class="icon fa fa-cogs"></i> Appearance &gt; Themes &gt; {utils.common.themeName}</code></li>
+                                    </ol>
+                                </div>
+                                
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Step Two - Activate the plugins</h3>
+                                    <p>This theme requires a number of plugins in order to work properly.</p>
+                                    <ol class="list">
+                                        <li><i class="icon fa fa-window-maximize"></i> Navigate to the Admin Dashboard on your WordPress website</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Click on <span class="btn btn-orange">Begin activating plugins</span> from the warning notification</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Check all the plugins</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Select <code>Activate</code> from the <code>Bulk Actions <i class="icon fa fa-caret-down"></i></code> dropdown</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Click on <span class="btn btn-blue">Apply</span></li>
+                                    </ol>
+                                </div>
+                                
+                                <div id="step3" class="section-block">
+                                    <h3 class="block-title">Step Three - Install the Demo Content</h3>
+                                    <p>We have prepared multiple <b>snapshots</b> - Demo Content packages - so that you can jump into editing your new website without the need to manually add content elements.</p>
+                                    <ol class="list">
+                                        <li>Locate the desired <code><i class="icon fa fa-file-archive"></i> #.zip</code> Demo Content archive</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Navigate to the Admin Dashboard on your WordPress website</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Go to <code><i class="icon fa fa-cogs"></i> Appearance &gt; Demo Content</code> and click on the <span class="btn btn-blue">+</span> button</li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Upload the desired snapshot, for example <code><i class="icon fa fa-file-archive"></i> 1.zip</code></li>
+                                        <li><i class="icon fa fa-window-maximize"></i> Click on <span class="btn btn-blue">INSTALL</span></li>
+                                    </ol>
+                                </div>
+                                
+                                <div id="available-snapshots" class="section-block">
+                                    <h3 class="block-title">Demo Content</h3>
+                                    <p>Our unique <b>Demo Content</b> manager handles gracefully installing and uninstalling <b>snapshots</b> without permanently altering your files or database entries.</p>
+                                    <div class="row">
+{foreach.core.getDocsSnapshots}
+                                        <div class="col-md-4 col-12 mb-3">
+                                            <div class="theme-card">
+                                                <a target="_blank" href="{@value.url}">
+                                                    <img class="img-fluid" src="src/img/snapshot-{@key}.png" alt="Screenshot {@key}">
+                                                </a>
+                                                <div class="card-block">
+                                                    <h4 class="card-title">{@key}. {@value.title}</h4>
+                                                    <p class="card-text">{@value.description}</p>
+                                                </div>
+                                                <a target="_blank" class="mask" href="{@value.url}">
+                                                    <i class="icon fa fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+{/foreach.core.getDocsSnapshots}
+                                    </div>
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder"><i class="icon fa fa-info-circle"></i></div>
+                                        <div class="content">
+                                            <p>Something went wrong? Simply uninstall the snapshot!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </section>
+                            
+                            <section id="section-features" class="doc-section">
+                                <h2 class="section-title">Features</h2>
+{foreach.core.getDocsSections}
+                                <div id="func-{@key}" class="section-block">
+                                    <h3 class="block-title">{@value.title}</h3>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder"><i class="icon fa fa-meteor"></i></div>
+                                        <div class="content">
+                                            <p>{@value.description}</p>
+                                        </div>
+                                    </div>
+                                    {@value.content}
+                                </div>
+{/foreach.core.getDocsSections}
+{if.core.useWidgetBlocks}
+                                <div id="xfunc-widget-blocks" class="section-block">
+                                    <h3 class="block-title">Widget Blocks</h3>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder"><i class="icon fa fa-meteor"></i></div>
+                                        <div class="content">
+                                            <p>Use editable widget blocks in all widget areas</p>
+                                        </div>
+                                    </div>
+                                    <p>Create your own beautiful widgets using any content editor you prefer, including <b>WPBakery Page Builder</b>.</p>
+                                    <p>Each "widget block" is a custom post type. Edit your own widget blocks by visiting <code><i class="icon fa fa-cogs"></i> Widget Blocks</code>.</p>
+                                    <p>You can then load your custom "widget blocks" in any Widget Area, by visiting <code><i class="icon fa fa-cogs"></i> Appearance &gt; Widgets</code> and adding the <code>{config.authorName}: Widget Block</code> widget.</p><br/>
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder"><i class="icon fa fa-exclamation-triangle"></i></div>
+                                        <div class="content">
+                                            <h3>Important!</h3>
+                                            <p>In order to use <b>WPBakery Page Builder</b> to edit your custom widget blocks follow these steps:</p>
+                                            <ol>
+                                                <li>Visit <code><i class="icon fa fa-cogs"></i> WPBakery Page Builder &gt; Role Manager</code></li>
+                                                <li>Click on the <code>Post types <i class="icon fa fa-caret-down"></i></code> drop-down</li>
+                                                <li>Select <code>Custom</code></li>
+                                                <li>Check <code><i class="icon fa fa-check-square"></i> st_widget_block</code></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+{/if.core.useWidgetBlocks}
+                            </section>
+                            
+                            <section id="section-license" class="doc-section">
+                                <h2 class="section-title">License</h2>
+                                <div class="section-block">
+                                    <div class="jumbotron text-center">
+                                        <div class="author-profile">
+                                            <div class="center-block"><img src="src/img/favicon.png" alt="{config.authorName}"></div>
+                                        </div>
+                                        <div class="speech-bubble">                    
+                                            <div class="text-left">
+                                                <p>The "{project.destProjectName}" WordPress theme by {config.authorName} is comprised of two parts:</p>
+                                                <ol class="list">
+                                                    <li>The PHP code and integrated HTML are licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt" target="_blank" rel="nofollow"><i class="icon fa fa-link"></i> General Public
+                                                    License (GPL) Version 2.</a></li>
+
+                                                    <li>All other parts, including but not limited to the CSS code, 
+                                                    demo content, images, design etc. are licensed according to the terms of 
+                                                    your purchased license.</li>
+                                                </ol>
+                                                <p>Read more about licensing <a href="{utils.common.marketLicenseUrl}" target="_blank" rel="nofollow"><i class="icon fa fa-link"></i> here</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#section-intro">Preface</a>
+                                <a class="nav-link scrollto" href="#section-about">About {options.projectName}</a>
+                                <a class="nav-link scrollto" href="#section-installation">Installation</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">1. Install the theme</a>
+                                    <a class="nav-link scrollto" href="#step2">2. Activate the plugins</a>
+                                    <a class="nav-link scrollto" href="#step3">3. Install the Demo Content</a>
+                                    <a class="nav-link scrollto" href="#available-snapshots">Demo Content</a>
+                                </nav>
+                                <a class="nav-link scrollto" href="#section-features">Features</a>
+                                <nav class="doc-sub-menu nav flex-column">
+{foreach.core.getDocsSections}
+                                    <a class="nav-link scrollto" href="#func-{@key}">{@value.title}</a>
+{/foreach.core.getDocsSections}
+{if.core.useWidgetBlocks}
+                                    <a class="nav-link scrollto" href="#xfunc-widget-blocks">Widget Blocks</a>
+{/if.core.useWidgetBlocks}
+                                </nav>
+                                <a class="nav-link scrollto" href="#section-license">License</a>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                </div>         
+            </div>
+        </div>
+        
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+                    <h3 class="promo-title text-center"><i class="fas fa-comment-dots"></i> Let's get in touch!</h3>
+                    <div class="row">
+                        <div class="figure-holder col-lg-5 col-md-6 col-12">
+                            <div class="figure-holder-inner">
+                                <a target="_blank" href="{utils.common.marketProfileUrl}"><img class="img-fluid" src="src/img/preview-store.png" alt="Theme preview - Store" /></a>
+                                <a target="_blank" href="{utils.common.marketProfileUrl}" class="mask"><i class="icon fa fa-hands-helping pink"></i></a>
+                            </div>
+                        </div>
+                        <div class="content-holder col-lg-7 col-md-6 col-12">
+                            <div class="content-holder-inner">
+                                <div class="desc">
+                                    <br/>
+                                    <h4 class="content-title"><strong>Don't hesitate to contact us</strong></h4>
+                                    <p>You can find answers to most of your issues in this theme's comments section.</p>
+                                    <p>We strive to bring you the best support possible, so don't hesitate to contact us directly via our profile page contact form.</p>
+                                    <p>Your <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> rating is appreciated!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small><i class="fa fa-quote-left"></i> {options.projectQuote}</small><br/>
+            <small class="copyright">Crafted with <i class="fas fa-heart"></i> by <a target="_blank" href="{utils.common.themeUrl}">{config.authorName}</a>.</small>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="src/js/functions.js"></script>
+    
+</body>
+</html>
+<!-- EOF -->

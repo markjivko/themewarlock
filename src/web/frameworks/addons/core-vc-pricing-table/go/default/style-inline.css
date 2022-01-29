@@ -1,0 +1,10 @@
+.st-vc-pricing-table .col.active .pricing-table-header {
+    background: <1>;
+    box-shadow: 0px -10px 0px <1>;
+}
+.st-vc-pricing-table .col.active .pricing-table-header > span {
+    background-color: <1.darker>;
+}
+.st-vc-pricing-table h1 span {
+    font-family: <f-h2.200.normal>;
+}

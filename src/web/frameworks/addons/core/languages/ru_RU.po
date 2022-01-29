@@ -1,0 +1,330 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Mark Jivko\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+
+msgid "Install Required Plugins"
+msgstr "Установить Необходимыe Плагины"
+
+msgid "Install Plugins"
+msgstr "Установить Плагины"
+
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr "Установить Плагин: %s"
+
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr "Обновление плагина: %s"
+
+msgid "Something went wrong with the plugin API."
+msgstr "Что-то пошло не так с API плагина."
+
+#. translators: 1: plugin name(s).
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Эта тема требует следующий плагин: %1$s."
+msgstr[1] "Эта тема требует следующие плагины: %1$s."
+msgstr[2] "Эта тема требует следующие плагины: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Эта тема рекомендует следующий плагин: %1$s."
+msgstr[1] "Эта тема рекомендует следующие плагины: %1$s."
+msgstr[2] "Эта тема рекомендует следующие плагины: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Этот плагин должен быть обновлен до последней версии, чтобы обеспечить максимальную совместимость с этой темой: %1$s."
+msgstr[1] "Эти плагины должны быть обновлены до последней версии, чтобы обеспечить максимальную совместимость с этой темой: %1$s."
+msgstr[2] "Эти плагины должны быть обновлены до последней версии, чтобы обеспечить максимальную совместимость с этой темой: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Есть обновление для: %1$s."
+msgstr[1] "Есть обновления, доступные для следующих плагинов: %1$s."
+msgstr[2] "Есть обновления, доступные для следующих плагинов: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Следующий обязательный плагин в настоящее время не активен: %1$s."
+msgstr[1] "Следующие обязательные плагины в настоящее время не активны: %1$s."
+msgstr[2] "Следующие обязательные плагины в настоящее время не активны: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Следующий рекомендуемый плагин в настоящее время не активен: %1$s."
+msgstr[1] "Следующие рекомендуемые плагины в настоящее время не активны: %1$s."
+msgstr[2] "Следующие рекомендуемые плагины в настоящее время не активны: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Начать установку плагина"
+msgstr[1] "Начать установку плагинов"
+msgstr[2] "Начать установку плагинов"
+
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Начать обновление плагина"
+msgstr[1] "Начать обновление плагинов"
+msgstr[2] "Начать обновление плагинов"
+
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Активировать плагин"
+msgstr[1] "Активировать плагины"
+msgstr[2] "Активировать плагины"
+
+msgid "Return to Required Plugins Installer"
+msgstr "Вернуться к установщику необходимым Плагинов"
+
+msgid "Return to the Dashboard"
+msgstr "Вернуться в Консоль"
+
+msgid "Plugin activated successfully."
+msgstr "Плагин авктивирован успешно."
+
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Этот плагин был успешно активирован:"
+msgstr[1] "Эти плагины были успешно активированы:"
+msgstr[2] "Эти плагины были успешно активированы:"
+
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Никаких действий не было выполнено. Плагин %1$s уже активирован."
+
+#. translators: 1: plugin name.
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Плагин не активирован. Для этой темы необходима более свежая версия %s. Пожалуйста, обновите плагин."
+
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Все плагины успешно установлены и активированы. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "Закрыть это уведомление"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "Есть один или несколько обязательных или рекомендуемых плагинов для установки, обновления или активации."
+
+msgid "Please contact the administrator of this site for help."
+msgstr "Пожалуйста, обратитесь к администратору этого сайта за помощью."
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Этот плагин должен быть обновлен, чтобы быть совместимым с вашей темой."
+
+msgid "Update Required"
+msgstr "Требуется обновление"
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Удаленный пакет плагина не содержит папку с желаемым slug и переименовать его невозможно."
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Пожалуйста, обратитесь к поставщику плагинов, и попросить их упаковать свой плагин в соответствии с руководством WordPress."
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Удаленный модуль пакета состоит из более чем одного файла, но эти файлы не упакованы в папку."
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "и"
+
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+msgid "Required"
+msgstr "Необходимый"
+
+msgid "Recommended"
+msgstr "Рекомендуемый"
+
+msgid "WordPress Repository"
+msgstr "Репозиторий WordPress"
+
+msgid "External Source"
+msgstr "Внешний ресурс"
+
+msgid "Pre-Packaged"
+msgstr "Упакованный в тему"
+
+msgid "Not Installed"
+msgstr "Не установлен"
+
+msgid "Installed But Not Activated"
+msgstr "Установлен, но не Активирован"
+
+msgid "Active"
+msgstr "Активирован"
+
+msgid "Required Update not Available"
+msgstr "Необходимое Обновление не доступно"
+
+msgid "Requires Update"
+msgstr "Требуется обновление"
+
+msgid "Update recommended"
+msgstr "Рекомендуется обновление"
+
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All"
+msgid_plural "All"
+msgstr[0] "Все"
+msgstr[1] "Все"
+msgstr[2] "Все"
+
+#. translators: 1: number of plugins.
+msgid "To Install"
+msgid_plural "To Install"
+msgstr[0] "Установить"
+msgstr[1] "Установить"
+msgstr[2] "Установить"
+
+#. translators: 1: number of plugins.
+msgid "Update Available"
+msgid_plural "Update Available"
+msgstr[0] "Доступно Обновление"
+msgstr[1] "Доступно Обновление"
+msgstr[2] "Доступно Обновление"
+
+#. translators: 1: number of plugins.
+msgid "To Activate"
+msgid_plural "To Activate"
+msgstr[0] "Активировать"
+msgstr[1] "Активировать"
+msgstr[2] "Активировать"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "неизвестный"
+
+msgid "Installed version:"
+msgstr "Установленная версия:"
+
+msgid "Minimum required version:"
+msgstr "Минимальная требуемая версия:"
+
+msgid "Available version:"
+msgstr "Доступная версия:"
+
+msgid "No plugins to install, update or activate."
+msgstr "Нет плагинова для установки, обновления или активации."
+
+msgid "Plugin"
+msgstr "Плагин"
+
+msgid "Source"
+msgstr "Источник"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Status"
+msgstr "Статус"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr "Установить %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr "Обновить %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr "Активировать %2$s"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "Информация об обновлении от автора плагина:"
+
+msgid "Install"
+msgstr "Установить"
+
+msgid "Update"
+msgstr "Обновить"
+
+msgid "Activate"
+msgstr "Активировать"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Плагины для установки не выбраны. Никаких действий не принимается."
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Плагины для обновления не выбраны. Никаких действий не принимается."
+
+msgid "No plugins are available to be installed at this time."
+msgstr "Сейчас нет плагинов доступных для установки."
+
+msgid "No plugins are available to be updated at this time."
+msgstr "Сейчас нет плагинов доступных для обновления."
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Плагины для активации не выбраны. Никаких действий не принимается."
+
+msgid "No plugins are available to be activated at this time."
+msgstr "Сейчас нет плагинов доступных для активации."
+
+msgid "Plugin activation failed."
+msgstr "Активация плагина не удалась."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Обновить плагин %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: %2$s."
+msgstr "Во время установки %1$s произошла ошибка: %2$s."
+
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr "Установка %1$s завершилась ошибкой."
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Процесс установки и активации запущен. В зависимости от мощности вашего сервера этот процесс может занять некоторое время. Пожалуйста, будьте терпеливы."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s установлен и активирован успешно."
+
+msgid "Show Details"
+msgstr "Показать Детали"
+
+msgid "Hide Details"
+msgstr "Скрыть Детали"
+
+msgid "All installations and activations have been completed."
+msgstr "Все установки и активации были завершены."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Устанавливаю и aктивирую Плагин %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Процесс установки начинается. В зависимости от мощности вашего сервера этот процесс может занять некоторое время. Пожалуйста, будьте терпеливы."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr "%1$s установлен успешно."
+
+msgid "All installations have been completed."
+msgstr "Все плагины установлены успешно."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Установка плагина %1$s (%2$d/%3$d)"
+

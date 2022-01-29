@@ -1,0 +1,25 @@
+/*
+    Template: {project.destDir}
+    Theme Name: {utils.common.themeName} - Child
+    Theme URI: {utils.common.themeUrl}
+    Author: {config.authorName}
+    Author URI: {config.authorUrl}
+    Description: Easy and non-destructive editing of {project.destProjectName} theme by {config.authorName}
+    Version: {project.versionVerbose}
+    License: GNU General Public License v2.0
+    License URI: <a target="_blank" href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU GPL v2.0</a>
+    Text Domain: {project.destDir}
+    Tags: {utils.common.tagsList}
+
+        {utils.common.quote}
+
+    (C) {config.authorUrl}
+*/
+
+/**
+ * Add your own styling below this line 
+ */
+
+    
+
+/*EOF*/

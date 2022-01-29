@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Mark Jivko\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ro_RO\n"
+
+msgid "Install Required Plugins"
+msgstr "Instalare module necesare"
+
+msgid "Install Plugins"
+msgstr "Instalare module"
+
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr "Instalare modul: %s"
+
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+msgid "Something went wrong with the plugin API."
+msgstr "Ceva nu a mers bine cu API-ul modulului."
+
+#. translators: 1: plugin name(s).
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Această temă necesită următorul modul: %1$s."
+msgstr[1] "Această temă necesită următoarele module: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Această temă recomandă următorul modul: %1$s."
+msgstr[1] "Această temă recomandă următoarele module: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Următorul modul trebuie actualizat la ultima versiune pentru a asigura compatibilitatea maximă cu această temă: %1$s."
+msgstr[1] "Următoarele module trebuie actualizate la ultima versiune pentru a asigura compatibilitatea maximă cu această temă: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Există o actualizare disponibilă pentru: %1$s."
+msgstr[1] "Există actualizări disponibile pentru: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Următorul modul necesar este acum inactiv: %1$s."
+msgstr[1] "Următoarele module necesare sunt acum inactive: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Următorul modul recomandat este acum inactiv: %1$s."
+msgstr[1] "Următoarele module recomandate sunt acum inactive: %1$s."
+
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Încep instalarea modulului"
+msgstr[1] "Încep instalarea modulelor"
+
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Încep actualizarea modulului"
+msgstr[1] "Încep actualizarea modulelor"
+
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Încep activarea modulului"
+msgstr[1] "Încep activarea modulelor"
+
+msgid "Return to Required Plugins Installer"
+msgstr "Înapoi la instalatorul modulelor necesare"
+
+msgid "Return to the Dashboard"
+msgstr "Înapoi la Panoul de control"
+
+msgid "Plugin activated successfully."
+msgstr "Modul activat cu succes."
+
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "N-am făcut nimic. Modulul %1$s este deja activat."
+
+#. translators: 1: plugin name.
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Modul neactivat. Pentru această temă este necesară o versiune mai mare a %s. Te rog actualizează modulul."
+
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Toate modulele au fost instalate și activate cu succes. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "Renunțați la această notificare"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+msgid "Please contact the administrator of this site for help."
+msgstr "Te rog contactează administratorul acestui sit pentru ajutor."
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Acest modul trebuie actualizat pentru a fi compatibil cu tema ta."
+
+msgid "Update Required"
+msgstr "Actualizare necesară."
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Pachetul modulului de la distanță nu conține un folder cu cu descriptorul dorit și redenumirea nu a funcționat."
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Te rog contactează furnizorul modulului și cere-i să împacheteze modulul în conformitate cu specificațiile WordPress."
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Pachetul de la distanță al modulului conține mai mult de un fișier, dar acestea nu sunt împachetate într-un folder."
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "și"
+
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+msgid "Required"
+msgstr "Obligatoriu"
+
+msgid "Recommended"
+msgstr "RECOMANDAT"
+
+msgid "WordPress Repository"
+msgstr "Depozitarul WordPress"
+
+msgid "External Source"
+msgstr "Sursă externă"
+
+msgid "Pre-Packaged"
+msgstr "Pre-împachetat"
+
+msgid "Not Installed"
+msgstr "Nu este instalat"
+
+msgid "Installed But Not Activated"
+msgstr "Instalat dar ne-activat"
+
+msgid "Active"
+msgstr "Activă"
+
+msgid "Required Update not Available"
+msgstr "Actualizarea necesară nu este disponibilă"
+
+msgid "Requires Update"
+msgstr "Necesită actualizare"
+
+msgid "Update recommended"
+msgstr "Actualizare recomandată"
+
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All"
+msgid_plural "All"
+msgstr[0] "Doar"
+msgstr[1] "Toate"
+
+#. translators: 1: number of plugins.
+msgid "To Install"
+msgid_plural "To Install"
+msgstr[0] "Pentru instalare"
+msgstr[1] "Pentru instalare"
+
+#. translators: 1: number of plugins.
+msgid "Update Available"
+msgid_plural "Update Available"
+msgstr[0] "Necesită actualizare"
+msgstr[1] "Necesită actualizare"
+
+#. translators: 1: number of plugins.
+msgid "To Activate"
+msgid_plural "To Activate"
+msgstr[0] "Pentru activare"
+msgstr[1] "Pentru activare"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "necunoscută"
+
+msgid "Installed version:"
+msgstr "Versiune instalată:"
+
+msgid "Minimum required version:"
+msgstr "Versiunea minimă necesară:"
+
+msgid "Available version:"
+msgstr "Versiune disponibilă:"
+
+msgid "No plugins to install, update or activate."
+msgstr "Niciun modul de instalat, actualizat sau activat."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Source"
+msgstr "Sursa"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Status"
+msgstr "Status"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr "Instalare %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr "Actualizare %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr "Activare %2$s"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "Mesaj de actualizare de la furnizorul modulului:"
+
+msgid "Install"
+msgstr "Instalează"
+
+msgid "Update"
+msgstr "Salveaza"
+
+msgid "Activate"
+msgstr "Activeaza"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "N-a fost selectat niciun modul pentru instalare. Nu s-a făcut nimic."
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "N-a fost selectat niciun modul pentru actualizare. Nu s-a făcut nimic."
+
+msgid "No plugins are available to be installed at this time."
+msgstr "Niciun modul nu este disponibil acum pentru instalare."
+
+msgid "No plugins are available to be updated at this time."
+msgstr "Niciun modul nu este disponibil acum pentru actualizare."
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "N-a fost selectat niciun modul pentru activare. Nu s-a făcut nimic."
+
+msgid "No plugins are available to be activated at this time."
+msgstr "Niciun modul nu este disponibil acum pentru activare."
+
+msgid "Plugin activation failed."
+msgstr "Activarea modulului a eșuat."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualizez modulul %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: %2$s."
+msgstr "A apărut o eroare în timpul instalării %1$s: %2$s."
+
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr "Instalarea %1$s a eșuat."
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Procesul de instalare și activare începe. Acest proces poate dura ceva pe unele servere de găzduire, așa că te rog să ai răbdare."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s a fost instalat și activat cu succes."
+
+msgid "Show Details"
+msgstr "Arată detalii"
+
+msgid "Hide Details"
+msgstr "Ascunde detalii"
+
+msgid "All installations and activations have been completed."
+msgstr "Toate instalările și activările s-au terminat."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalare și activare modul %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Procesul de instalare începe. Acest proces poate dura ceva pe unele servere de găzduire, așa că te rog să ai răbdare."
+
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr "%1$s a fost instalat cu succes."
+
+msgid "All installations have been completed."
+msgstr "Toate instalările s-au terminat."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalare modul %1$s (%2$d/%3$d)"
+

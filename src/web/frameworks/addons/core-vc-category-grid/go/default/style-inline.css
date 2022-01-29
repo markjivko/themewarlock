@@ -1,0 +1,13 @@
+.st-vc-category-grid ul.sort > li.active, 
+.st-vc-category-grid ul.sort > li:hover {
+    border-color: <1>;
+}
+.st-vc-category-grid .isotope > div > .preview.no-feature {
+    box-shadow: 0px 0px 0px 2px inset <1>;
+}
+.st-vc-category-grid .isotope > div > .preview > .cover {
+    background: <1>;
+}
+.st-vc-category-grid h1 span {
+    font-family: <f-h2.200.normal>;
+}

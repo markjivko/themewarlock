@@ -1,0 +1,343 @@
+/*
+# Social area
+*/
+[data-role="{project.destDir}-header-social-accounts"] {
+    background: #ffffff;
+}
+[data-role="{project.destDir}-header-social-accounts"] .header-social-accounts-holder {
+    min-height: 45px;
+    background: #f7f8f3;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+/*
+# Typography
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+    word-break: break-word;
+}
+code, pre {
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    white-space: pre-wrap;
+}
+code br {
+    display: none;
+}
+blockquote {
+    display: inline-block;
+    padding: 1em 3em 1em 2em;
+    position: relative;
+    font-size: 1.3em;
+}
+blockquote:before {
+    content: "\201c";
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 9em;
+    vertical-align: top;
+    color: #aaaaaa;
+    z-index: 0;
+    line-height: 1em;
+    opacity: 0.6;
+    transform: rotate(0deg);
+    transition: all 0.5s linear;
+}
+blockquote:hover:before {
+    transform: rotate(-30deg);
+    opacity: 0.2;
+}
+blockquote p {
+    position: relative;
+    z-index: 1;
+}
+blockquote cite {
+    clear: both;
+    width: 100%;
+    display: inline-block;
+    font-weight: bold;
+    font-style: normal;
+    position: relative;
+    margin-top: 10px;
+}
+blockquote cite:before {
+    position: relative;
+    content: '\2014';
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+/*
+# Alignment
+*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+{else.onepage.pageGuttersToggle}
+#page {
+    padding: 0px;
+}
+{/else.onepage.pageGuttersToggle}
+
+/*
+# Footer
+*/
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+footer.site-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*
+# Comments
+*/
+#comments .comments-title-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    z-index: 2;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#comments .comments-title-container:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 8px;
+    top: 11px;
+    left: 0px;
+    background: #eeeeee;
+    z-index: 0;
+}
+#comments .comments-title-container .comments-title {
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    background: #ffffff;
+    width: auto;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 30px;
+    color: #000000;
+}
+#comments .comment-list li {
+    list-style: none;
+}
+#comments .comment-list li.comment {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+#comments .comment-list > li.comment:last-child {
+    border-bottom: none;
+}
+#comments .comment-body > .comment-meta .comment-metadata {
+    margin-left: 95px;
+    margin-top: 20px;
+}
+#comments .comment-body > .comment-meta .comment-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+#comments .comment-body > .comment-meta .comment-author img.avatar {
+    width: 75px;
+    margin-right: 20px;
+}
+#comments .comment-body > .comment-content,
+#comments .comment-body > .reply {
+    margin-left: 95px;
+}
+#respond {
+    position: relative;
+    text-align: center;
+}
+#respond > form {
+    text-align: initial;
+    margin-top: 30px;
+}
+#respond:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 8px;
+    top: 11px;
+    left: 0px;
+    background: #eeeeee;
+    z-index: 1;
+}
+#reply-title {
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    background: #ffffff;
+    width: auto;
+    line-height: 30px;
+    height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 30px;
+    color: #000000;
+}
+
+/*
+# Article
+*/
+#content {
+    padding-top: 75px;
+}
+body.home #content {
+    padding-top: 0px;
+}
+article .post-thumbnail-holder {
+    min-height: 100px;
+    max-height: 800px;
+    overflow: hidden;
+}
+body.home article .post-thumbnail-holder {
+    display: none;
+}
+article .post-thumbnail-holder > img {
+    width: 100%;
+}
+article .entry-header {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+    background: #ffffff;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    top: -40px;
+    min-height: 100px;
+    padding: 40px 0;
+}
+article .entry-header .entry-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+article .entry-header .entry-meta {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+}
+
+/*
+## Footer links
+*/
+footer.entry-footer .cat-links,
+footer.entry-footer .tags-links,
+footer.entry-footer .comments-link,
+footer.entry-footer .edit-link,
+.entry-content .page-links {
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 20px;
+    width: 100%;
+}
+footer.entry-footer .tags-links a,
+footer.entry-footer .comments-link a,
+.entry-content .page-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 2px #cccccc;
+    text-decoration: none;
+    margin: 10px 5px 0px;
+}
+footer.entry-footer .tags-links a:hover,
+footer.entry-footer .comments-link a:hover,
+.entry-content .page-links a:hover {
+    box-shadow: 0px 0px 0px 2px;
+    background: #f7f8f3;
+}
+
+
+/*
+# Navigation links
+*/
+nav.post-navigation,
+nav.posts-navigation {
+    padding: 10px;
+}
+nav .nav-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 2px #cccccc;
+    text-decoration: none;
+    margin-left: 10px;
+}
+nav .nav-links a:hover {
+    box-shadow: 0px 0px 0px 2px;
+    background: #f7f8f3;
+}
+
+/*
+# Sidebar
+*/
+.widget-area section {
+    background: #f7f8f3;
+    padding: 20px;
+}
+.widget-area section ul {
+    padding-left: 10px;
+}
+.widget-area section li {
+    list-style: none;
+    padding: 5px;
+}
+.widget-area section .widget-title {
+    width: 90%;
+    height: auto;
+    background: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: 5%;
+    top: -30px;
+    position: relative;
+    margin-bottom: -10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.widget-area section.widget_calendar table {
+    width: 100%;
+}
+.widget-area section .search-form label,
+.widget-area section .search-form input[type=submit] {
+    width: 100%;
+}
+
+/*
+# Footer
+*/
+footer.site-footer {
+    background: #f7f8f3;
+}
+
+/*
+## Copyright notice
+*/
+aside.sidebar-footer.footer-final-copyright {
+    margin-top: 30px;
+}

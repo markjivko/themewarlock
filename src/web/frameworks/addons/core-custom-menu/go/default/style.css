@@ -1,0 +1,121 @@
+.floating-menu header[data-role="banner"] {
+    position: fixed;
+    z-index: 1000;
+    width: auto;
+    background-color: rgba(255,255,255,0.9);
+    top: 0px;
+}
+.admin-bar .floating-menu header[data-role="banner"] {
+    top: 32px;
+}
+.floating-menu #content {
+    margin-top: 75px;
+    box-shadow: 0px -75px #ffffff;
+}
+.main-navigation {
+    clear: none;
+    display: inline-block;
+    float: right;
+    width: auto;
+}
+.main-navigation ul ul {
+    top: 75px;
+}
+.nav-menu li {
+    background: #ffffff;
+    min-height: 40px;
+    padding: 5px 15px;
+    line-height: 30px;
+    text-transform: none;
+    font-size: 1em;
+}
+.nav-menu > li {
+    cursor: pointer;
+    background: transparent;
+    height: 75px;
+    padding: 0 10px;
+    line-height: 75px;
+    vertical-align: middle; 
+    transition: all 0.1s linear;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+.nav-menu > li.page_item_has_children:hover,
+.nav-menu > li.menu-item-has-children:hover {
+    overflow: visible;
+}
+.nav-menu ul > li.page_item_has_children:before,
+.nav-menu ul > li.menu-item-has-children:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    width: 0px;
+    height: 0px;
+    margin-top: -3px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #000000;
+}
+.nav-menu > li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    bottom: -3px;
+    left: 50%;
+    margin-left: 0px;
+    transition: all 0.1s linear;
+}
+.nav-menu > li.current_page_item:before {
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    bottom: -10px;
+}
+.nav-menu a, 
+.nav-menu a:visited {
+    text-decoration: none;
+}
+@media screen and (max-width: 991.98px) {
+    .nav-menu {
+        padding: 25px 0 20px !important;
+    }
+    .nav-menu ul {
+        display: inline-block !important;
+        width: auto;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        box-shadow: none !important;
+        padding-left: 25px;
+    }
+    .nav-menu li {
+        display: list-item !important;
+        width: 100%;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        height: auto;
+        box-shadow: none !important;
+        height: auto;
+        line-height: 3em;
+        background: transparent;
+    }
+    .nav-menu > li:before {
+        display: none;
+    }
+    .nav-menu a {
+        display: inline-block !important;
+        width: 100%;
+    }
+    .nav-menu ul > li.page_item_has_children:before,
+    .nav-menu ul > li.menu-item-has-children:before {
+        display: none;
+    }
+}

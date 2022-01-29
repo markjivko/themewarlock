@@ -1,0 +1,45 @@
+<h2>User activity Logs</h2>
+<?php
+    $usersList = $this->getPlaceholder(View_Users::PH_USERS);
+    if (count($usersList)):
+        foreach ($usersList as $userInfo):
+            list($userId, $userData) = $userInfo;
+?>
+    <div class="row">
+        <div class="panel panel-info">
+            <div id="collapseLog<?php echo $userId;?>" role="tab" class="panel-heading">
+                <h2 aria-controls="collapseLog<?php echo $userId;?>Controls" href="#collapseLog<?php echo $userId;?>Controls" data-toggle="collapse" role="button" aria-expanded="false" class="panel-title">
+                    <b><?php echo null == $userData ? (0 == $userId ? 'System' : ('Unknown #' . $userId)) : ($userData->name . ' <i>(' . $userData->role . ')</i>');?></b>
+                    <span class="pull-right glyphicon glyphicon-chevron-down"></span><span class="pull-right glyphicon glyphicon-chevron-up"></span>
+                    <span class="pull-right glyphicon glyphicon-refresh btn-refresh"></span>
+                </h2>
+            </div>
+            <div aria-labelledby="collapseLog<?php echo $userId;?>" role="tabpanel" class="panel-collapse collapse" id="collapseLog<?php echo $userId;?>Controls" aria-expanded="false" style="">
+                <div class="log-view" log-view-id="<?php echo $userId;?>"></div>
+            </div>
+            <div class="panel-footer">Loading data...</div>
+        </div>
+    </div>
+<?php endforeach;?>
+<?php else: ?>
+    <div class="row">
+        <div class="alert alert-info alert-loading" role="alert">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            Insufficient data or apps not in first 100 results. Please check again later...
+        </div>
+    </div>
+<?php endif; ?>
+<div class="modal fade" id="info">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Log info</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary">Got it</button>
+            </div>
+        </div>
+    </div>
+</div>

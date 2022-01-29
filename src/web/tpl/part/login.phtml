@@ -1,0 +1,19 @@
+<div class="form-container">
+    <form class="form-signin" method="post" action="">
+        <div class="header"><div class="logo"></div></div>
+        <h2 class="form-signin-heading"></h2>
+        <?php if ($notification = $this->getPlaceholder(View_Login::PH_NOTIFICATION)) : ?>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <?php echo $notification; ?>
+            </div>
+        <?php endif; ?>
+    </form>
+</div>
+<script type='text/javascript'>
+    // Store the binome
+    var loginBinome = {
+        username: '<?php $this->printPlaceholder(View_Login::PH_USERNAME); ?>',
+        password: '<?php $this->printPlaceholder(View_Login::PH_PASSWORD); ?>',
+    };
+</script>

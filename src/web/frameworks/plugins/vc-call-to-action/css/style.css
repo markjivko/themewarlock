@@ -1,0 +1,30 @@
+.{Plugin.getSlug} {
+    background-size: cover;
+    background-position: 0 0%;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.{Plugin.getSlug}:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/parallax-overlay.png") repeat scroll 0 0 transparent;
+}
+.{Plugin.getSlug} > div {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+.{Plugin.getSlug} p {
+    font-size: 30px;
+    line-height: 34px;
+    color: #ffffff;
+}

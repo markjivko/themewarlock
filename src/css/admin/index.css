@@ -1,0 +1,40 @@
+td a {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+td button:first-child {
+    position: relative;
+    border-radius: 3px 0 0 3px;
+}
+td [data-role="generate"] .progress {
+    background: #02d078 none repeat scroll 0 0;
+    border: medium none;
+    bottom: 0;
+    display: inline-block;
+    height: 4px;
+    left: 0;
+    margin-bottom: -4px;
+    position: absolute;
+    transition: all 1s linear;
+    width: 0%;
+}
+[data-download] {
+    text-indent: 20px;
+}
+[data-download] .glyphicon {
+    text-indent: 0px;
+    margin-right: 5px
+}
+[data-download] .file-size {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.modal-body img {
+    width: 100%;
+}
+#modal-preview .modal-content {
+    border: none;
+}
+#modal-preview .modal-body {
+    padding: 0px;
+}

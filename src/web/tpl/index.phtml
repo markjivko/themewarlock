@@ -1,0 +1,31 @@
+<!doctype html>
+<html logged-in="<?php echo Session::getInstance()->get(Session::PARAM_WEB_USER_MODEL) == null ? "false" : "true";?>">
+    <head>
+        <title><?php echo htmlspecialchars($this->getTitle());?></title>
+        <meta name="robots" content="noindex,nofollow,noarchive,noodp,nosnippet,noydir" />
+        <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes">
+        <link rel="icon" type="image/ico" href="/favicon.ico?version=<?php echo WebView::getScriptVersion();?>" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/jquery-ui.min.css" />
+        <link rel="stylesheet" href="/css/jquery-ui.theme.min.css" />
+        <link rel="stylesheet" href="/css/style.css?version=<?php echo WebView::getScriptVersion();?>" />
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <script src="/js/particle.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/granim.min.js?version=<?php echo WebView::getScriptVersion();?>"></script>
+        <script src="/js/functions.js?version=<?php echo WebView::getScriptVersion();?>"></script>
+        <?php echo $this->getHead();?>
+    </head>
+    <body>
+        <div class="loading"><div id="loading-particles"></div><span>Loading...<p></p></span></div>
+        <div class="container">
+            <div id="message-area"></div>
+            <?php $this->printContent();?>
+            <div class="footer">
+                Your request with IP <b><?php echo $_SERVER['REMOTE_ADDR'];?></b> has been logged.<br/>
+                Page generated in <?php echo round(microtime(true) - Router::$startTime, 4);?>s<?php $revUserModel = Session::getInstance()->get(Session::PARAM_WEB_USER_MODEL);?><?php if (null != $revUserModel):?>, revision <b class="revision <?php echo htmlspecialchars($revUserModel->role);?>" data-placement="top" data-toggle="tooltip" title="<?php echo htmlspecialchars(Git::getDetails());?>"><?php echo substr(Git::getRevisionLocal(), 0, 12);?></b><?php endif;?>.
+            </div>
+        </div>
+    </body>
+</html>

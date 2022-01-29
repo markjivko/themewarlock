@@ -1,0 +1,11 @@
+<div class="form-container">
+    <form class="form-signin form-warning" method="post" action="">
+        <div class="header"><div class="logo"></div></div>
+        <h2 class="form-signin-heading"><?php echo $this->getPlaceholder(WebView::PH_TITLE);?></h2>
+        <div class="alert alert-warning" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <b>Missing</b> error triggered whilst calling <b><?php echo $this->getPlaceholder(View_Error::PH_CONTROLLER); ?><?php echo ($this->getPlaceholder(View_Error::PH_METHOD) ? '::' . $this->getPlaceholder(View_Error::PH_METHOD) . '()' : ''); ?></b>
+        </div>
+        <a href="/" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-home"></span> Return home</a>
+    </form>
+</div>

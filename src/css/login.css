@@ -1,0 +1,109 @@
+/*Content elements*/
+body {
+    position: static;
+}
+html {
+    background: url(../img/background.svg) no-repeat 0 100% #f4fcff;
+    background-size: 100% auto;
+}
+h2 {
+    color: #158cba;
+    text-align: center;
+}
+label {
+    color: #158cba;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+}
+.container > .form-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.form-signin {
+    width: 330px;
+    height: auto;
+    padding: 15px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 3px #e7f9fd, 0 2px 0 rgba(255, 255, 255, 0.4) inset;
+    position: relative;
+    z-index: 10;
+}
+.form-signin .header {
+    text-align: center;
+    width: 100%;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .form-signin-heading {
+    color: #333333;
+    text-shadow: 0px 0px 3px #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin.form-warning .logo,
+.form-signin.form-error .logo {
+    animation: wiggle 0.8s linear;
+    animation-iteration-count: infinite;
+}
+.form-signin.form-warning .logo {
+    background-image: url("../img/logo-warning.png");
+}
+.form-signin.form-error .logo {
+    background-image: url("../img/logo-error.png");
+}
+@keyframes wiggle {
+    20%  { transform: translateX(5px);  }
+    40%  { transform: translateX(-5px); }
+    60%  { transform: translateX(2px);  }
+    80%  { transform: translateX(-1px); }
+    100% { transform: translateX(0);    }
+}
+@media (min-width:768px) {
+    .row.error-row {
+        width: 50%;
+    }
+}
+.footer {
+    position: absolute;
+    text-shadow: 0 1px 2px #fff;
+}
+body > div.container {
+    padding-top: 0px !important;
+}

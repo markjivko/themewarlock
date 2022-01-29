@@ -1,0 +1,21 @@
+th {
+    font-weight: bold;
+    font-size: 20px;
+}
+table tr {
+    border-bottom: 3px solid rgba(255,255,255,50) !important;
+}
+[data-role="language"] {
+    border: none;
+    cursor: pointer;
+}
+[data-role="translation"] {
+    resize: none;
+    min-width: 400px;
+}
+[data-role="translation"][data-status="success"] {
+    border-color: #02d078;
+}
+[data-role="translation"][data-status="failure"] {
+    border-color: #ff7877;
+}

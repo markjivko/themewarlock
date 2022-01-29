@@ -1,0 +1,29 @@
+/*
+# Custom Logo
+*/
+header .site-branding {
+    padding: 10px 0;
+    width: auto;
+    display: inline-block;
+    height: 75px;
+}
+header .site-branding > .site-title {
+    display: inline-block;
+}
+header .site-branding > .site-title a {
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 50px;
+    display: inline-block;
+    font-weight: bold;
+}
+header .site-branding > .site-title a > img {
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    display: inline-block;
+    margin-right: 10px;
+}
+header .site-branding > .site-description {
+    display: none;
+}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <span class="logo logo-small logo-dark"></span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigationbar">
+            <ul class="nav navbar-nav">
+                <?php foreach ($this->getPlaceholder(View_Admin::PH_MENU) as $controller): ?>
+                    <li class="dropdown <?php echo $controller[WebMenu::CONTROLLER_CURRENT] ? 'active' : ''; ?>">
+                        <a href="/<?php echo $controller[WebMenu::CONTROLLER_PATH];?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $controller[WebMenu::CONTROLLER_NAME]; ?> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <?php foreach ($controller[WebMenu::CONTROLLER_ITEMS] as $item): if ($item[WebMenu::ITEM_HIDDEN]) continue;?>
+                                <li class="<?php echo $item[WebMenu::ITEM_CURRENT] ? 'active' : ''; ?>"><a href="/<?php echo $item[WebMenu::ITEM_PATH]; ?>"><?php echo $item[WebMenu::ITEM_NAME]; ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hello, <b><?php echo Session::getInstance()->get(Session::PARAM_WEB_USER_MODEL)->name; ?></b>! <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void();">Logged in as <b><?php echo ucfirst(Session::getInstance()->get(Session::PARAM_WEB_USER_MODEL)->role); ?></b></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/logout" ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <canvas class="navbar-ribbon"></canvas>
+</nav>

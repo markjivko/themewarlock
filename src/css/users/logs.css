@@ -1,0 +1,20 @@
+.panel-heading .panel-title[aria-expanded=false] > span.glyphicon-chevron-up, 
+.panel-heading .panel-title[aria-expanded=true] > span.glyphicon-chevron-down {
+    display: none;
+}
+.panel-heading .panel-title[aria-expanded=false] > span.glyphicon-chevron-down, 
+.panel-heading .panel-title[aria-expanded=true] > span.glyphicon-chevron-up {
+    display: inline-block;
+}
+.btn-refresh {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.modal .modal-body {
+    overflow: hidden;
+}
+.table td.args {
+    cursor: pointer;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

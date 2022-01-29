@@ -1,0 +1,8 @@
+<?php 
+    /*@var $project Model_Project*/
+    $project = $this->getPlaceholder(View_Admin::PH_PROJECT);
+?>
+<div data-role="project" data-project-id="<?php echo $project->getProjectId();?>" data-user-id="<?php echo $project->getUserId();?>">
+    <div data-role="tools"></div>
+    <iframe data-role="preview"></iframe>
+</div>

@@ -1,0 +1,6 @@
+.st-vc-twitter {
+    background-color: <1.darker>;
+}
+.st-vc-twitter .tweets > .navigation > i.active {
+    background: <1>;
+}

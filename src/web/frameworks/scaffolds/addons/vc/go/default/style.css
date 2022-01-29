@@ -1,0 +1,9 @@
+{if.core.useStoryline}
+/*
+# Storyline - {scaffold.title}
+*/
+.st-{Scaffold.slug} {
+}
+body.compose-mode {Scaffold.slug} {
+}
+{/if.core.useStoryline}

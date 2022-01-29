@@ -1,0 +1,259 @@
+/*Document styling*/
+@font-face {
+    font-family: 'Lobster';
+    src: url('../img/fonts/Lobster/lobster_1.3-webfont.woff2') format('woff2'),
+         url('../img/fonts/Lobster/lobster_1.3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+.blurred {
+    filter: blur(0.5rem);
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+nav .navbar-ribbon {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -4px;
+    left: 0;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+nav:hover .navbar-ribbon {
+    opacity: 1;
+}
+.monospace {
+    font-family: monospace;
+}
+body {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    height: 100%;
+    background: transparent;
+    position: relative;
+}
+body > div.container {
+    padding-top: 50px;
+}
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    display: none;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.5s linear;
+}
+.loading > span {
+    transition: all 0.5s linear;
+    transform: rotate3d(1, 1, 0, 90deg);
+    opacity: 0;
+    width: 256px;
+    height: 140px;
+    margin-left: -128px;
+    margin-top: -70px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    test-align: left;
+    text-indent: -1000em;
+    background: url("../img/loading.gif") no-repeat 0 0 transparent;
+    background-size: 100% 100%;
+}
+.loading > span > p {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    width: 100% !important;
+    height: auto;
+    margin-top: 10px;
+    text-shadow: 0px 1px 0px #ffffff;
+    cursor: default;
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+}
+.loading > span > p::-moz-selection { background: rgba(255,255,255,0); }
+.loading > span > p::selection { background: rgba(255,255,255,0); }
+body[data-loading="true"] > .loading > span {
+    transform: rotate3d(0, 0, 0, 0);
+    opacity: 1;
+}
+body[data-loading="true"] > .loading {
+    background: rgba(255, 255, 255, 0.6);
+}
+#loading-particles {
+    width: 100%;
+    height: 100%;
+}
+td {
+    vertical-align: middle !important;
+}
+.footer {
+    bottom: 0;
+    color: #999999;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+/*Logo*/
+.logo {
+    display: inline-block;
+    background: url("../img/logo.png") no-repeat 50% 50% transparent;
+    background-size: 100% auto;
+    width: 256px;
+    height: 128px;
+    position: relative;
+    cursor: pointer;
+}
+.logo-small {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+.logo-dark {
+    background: linear-gradient(45deg, #aaaaaa 0%, #000000 100%);
+    position: relative;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.logo-dark.active {
+    opacity: 1;
+}
+.logo-dark:hover {
+    background: linear-gradient(45deg, #80d62f 0%, #3687e3 100%);
+}
+.logo-dark::after {
+    display: block;
+    content: "";
+    background: url("../img/logo-header-hollow.png") no-repeat 0 0 transparent !important;
+    background-size: 100% auto !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+@-webkit-keyframes rotate {
+    0% {-webkit-transform: rotate(0deg); border-radius: 0%;}
+    50% {border-radius: 50%;background: #ffffff;}
+    100% {-webkit-transform: rotate(360deg); border-radius: 0%;}
+}
+@-moz-keyframes rotate {
+    0% {-moz-transform: rotate(0deg);border-radius: 0%;}
+    50% {border-radius: 50%;background: #ffffff;}
+    100% {-moz-transform: rotate(360deg);border-radius: 0%;}
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);border-radius: 0%;}
+    50% {border-radius: 50%;background: #ffffff;}
+    100% {transform: rotate(360deg);border-radius: 0%;}
+}
+/*Message area*/
+#message-area {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+#message-area > div {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+/*No cursor area*/
+.nocursor {
+    cursor: url(/img/cursor.png), none !important;
+}
+/*Textarea*/
+textarea.notebook {
+    background: url(/img/textarea.png) repeat 0 -1px #ffffff !important;
+    line-height: 25px !important;
+    vertical-align: baseline;
+    padding-top: 0px !important;
+    font-size: 14px !important;
+    color: #000 !important;
+    font-family: monospace;
+}
+
+/* Revision */
+.revision.admin {
+    cursor: pointer;
+}
+
+/*JSON coloring*/
+.json-key {
+    color: #009900;
+}
+.json-value {
+    color: #0000e6;
+}
+.json-string {
+    color: #ce7b00;
+}
+.alert a {
+    color: #ffffff !important;
+    font-weight: bold !important;
+} 
+
+/*Web Notif*/
+.web-notif-container {
+    position: relative;
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 5px;
+}
+.web-notif-container > .message {
+    margin-left: 20px;
+    cursor: default;
+}
+.web-notif-container > .message > .title {
+    position: absolute;
+    top: -14px;
+    margin-left: 24px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 10px;
+    left: 20px;
+    width: auto;
+    white-space: nowrap;
+}
+.web-notif-container > .message > .glyphicon{
+    margin-right: 10px;
+}
+.web-notif-container > .message-info > .title, .web-notif-container > .message-info > .glyphicon{
+    color: rgb(21, 140, 186);
+}
+.web-notif-container > .message-warning > .title, .web-notif-container > .message-warning > .glyphicon{
+    color: orange;
+}
+.web-notif-container > .message-error > .title, .web-notif-container > .message-error > .glyphicon{
+    color: red;
+}

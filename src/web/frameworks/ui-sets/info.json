@@ -1,0 +1,10 @@
+{
+    "default": [
+        "Default UI",
+        "The default Bootstrap 4 theme"
+    ],
+    "lumen": [
+        "Lumen",
+        "Light and shadow"
+    ]
+}

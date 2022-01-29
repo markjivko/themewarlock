@@ -1,0 +1,114 @@
+/*
+# Heading
+*/
+.{Plugin.getSlug} h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 75px 0; 
+    padding: 0;
+}
+.{Plugin.getSlug} h1 span {
+    display: inline-block;
+    text-transform: none;
+    font-size: 0.5em;
+    clear: both;
+    width: 100%;
+    font-weight: 200;
+}
+
+/*
+# Navigation
+*/
+.{Plugin.getSlug} .swipe-navigation {
+    right: 15px;
+    width: 65px;
+    height: 30px;
+    position: absolute;
+    top: -150px;
+}
+.{Plugin.getSlug} .swipe-navigation > .left, 
+.{Plugin.getSlug} .swipe-navigation > .right {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    color: #cccccc;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+.{Plugin.getSlug} .swipe-navigation > .left:hover, 
+.{Plugin.getSlug} .swipe-navigation > .right:hover {
+    color: #000000;
+    border-color: #000000;
+}
+.{Plugin.getSlug} .swipe-navigation > .right { 
+    margin-left: 3px;
+}
+
+/*
+# Swipe elements
+*/
+.{Plugin.getSlug} .swipe {
+    height: 275px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 75px;
+}
+.{Plugin.getSlug} .swipe > div {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 200px;
+    text-align: center;
+    cursor: move;
+    height: 100%;
+    position: absolute;
+}
+.{Plugin.getSlug} .swipe .author {
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: visible;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -50px;
+    background-position: 50% 50% !important;
+    transition: all 0.3s ease-out;
+    background-size: auto 100% !important;
+}
+.{Plugin.getSlug} .swipe .author:hover {
+    background-size: auto 120% !important;
+}
+.{Plugin.getSlug} .swipe .author > span {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    bottom: 0 !important;
+    font-size: 30px;
+    font-weight: 200;
+    height: 70px;
+    left: 75px;
+    line-height: 70px;
+    min-width: 200px;
+    padding-left: 25px;
+    position: absolute;
+    text-align: left;
+    vertical-align: bottom !important;
+    border-radius: 100px 0 0 0px;
+}
+
+/*
+# Widget areas
+*/
+aside .{Plugin.getSlug} h1 {
+    margin-top: 0px;
+}

@@ -1,0 +1,43 @@
+# Default server configuration
+#
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www;
+
+    # Add index.php to the list if you are using PHP
+    index index.php index.html index.htm;
+
+    # Errors are handled by PHP
+    error_page 404 index.php;
+
+    # No indexes
+    autoindex off;
+
+    server_name tw.com www.tw.com;
+
+    location / {
+        # Attempt files, folders or 404
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+
+        # With php7.0-fpm:
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    }
+
+    # no access to /web
+    location /web {
+        deny all;
+    }
+
+    # deny access to sensitive files
+    location ~ /\.ht {
+        deny all;
+    }
+}
