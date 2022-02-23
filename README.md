@@ -1,7 +1,9 @@
 # ThemeWarlock
 
 <p align="center">
-    <img src="https://repository-images.githubusercontent.com/453470189/5584e2e8-3016-4be2-a956-b471a9d63c33"/>
+    <a href="https://github.com/markjivko/themewarlock">
+        <img src="https://repository-images.githubusercontent.com/453470189/5584e2e8-3016-4be2-a956-b471a9d63c33"/>
+    </a>
 </p>
 
 ThemeWarlock is a theme builder designed for quick preview and deployment of WordPress themes.
